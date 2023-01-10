@@ -8,26 +8,6 @@
 %tertiary{
     color:#99E2D0;
 }
-/*
-@keyframe load-text {
-    0% {opacity:0;}
-    99% {opacity:0.2;}
-    100% {opacity:1;}
-    }
-    
-    .reservation, .functionning, .restaurants {
-    animation: load-text 3s 1;
-    }
-@keyframe load-icon {
-    100% {display:none;}
-    99% {opacity:0;}
-    0% {opacity:1;}
-    }
-        
-    .loading {
-    animation: load-icon 3s 1;
-    }
-    */
 
 p, span, a{
     font-family: roboto;
@@ -52,7 +32,18 @@ h1, h2, h3, h4{
 body{
     margin:0;
 }
-
+/* Première animation*/
+.loading{
+    margin: 50% auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 20;
+    background-color: white;
+    padding: 100px 0;
+    font-size: 50px;
+}
 /*HEADER*/
 header{
     width: 100%;
@@ -111,15 +102,7 @@ footer{
         color:black;
     }
 }
-.loading{
-    margin: 20px auto;
-    text-align: center;
-    /*
-    i{
-        display-duration:2s;
-    }
-    */
-}
+
 .reservation{
     background-color: #f3f3f3;
     opacity: 0.8;
@@ -317,22 +300,26 @@ footer{
         .dishes{
             width: 70%;
             padding:20px 0 20px 15px;
-        }
-        &:hover{
-            .hover{
-                display: block;
-                width: 30%;
-                padding:0;
-                border-radius: 0 20px 20px 0;
-                background-color: #9356DC;
-                text-align:center;
-                i{
-                    margin-top: 30%;
-                    /*fa-animation-direction: reverse;*/
-                    animation-name: fa-spin;
-                    animation-duration: var(--fa-animation-duration,2s);
-                    animation-iteration-count: var(--fa-animation-iteration-count,1.5s);
-                    animation-timing-function: var(--fa-animation-timing,linear);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:hover{
+
+                h3,span{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+
+                }
+
+                .hover{
+                    display: block;
+                    width: 30%;
+                    padding:0;
+                    border-radius: 0 20px 20px 0;
+                    background-color: #9356DC;
+                    text-align:center;
                 }
             }
             .prix{
@@ -542,12 +529,13 @@ footer{
 }
 /*La note enchantée*/
     /*MAIN*/
-.enchantee-background-img{
-    width: 100%;
-    height: 350px;
-    background-image: url(img/restaurants/lanoteenchantee.jpg);
-    background-size: contain;
-}
+    .enchantee-background-img{
+        width: 100%;
+        height: 350px;
+        background-image: url(img/restaurants/lanoteenchantee.jpg);
+        background-size: contain;
+    }
+    
 
 /*A la française*/
     /*MAIN*/
@@ -833,12 +821,13 @@ footer{
 }
 /*La note enchantée*/
     /*MAIN*/
-.enchantee-background-img{
-    width: 100%;
-    height: 350px;
-    background-image: url(img/restaurants/lanoteenchantee.jpg);
-    background-size: contain;
-}
+    .enchantee-background-img{
+        width: 100%;
+        height: 350px;
+        background-image: url(img/restaurants/lanoteenchantee.jpg);
+        background-size: contain;
+    }
+    
 
 /*A la française*/
     /*MAIN*/
