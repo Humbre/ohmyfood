@@ -8,6 +8,75 @@
 %tertiary{
     color:#99E2D0;
 }
+/* Première animation*/
+@keyframes animLoading {
+    0%{
+        opacity: 1;
+        display: block;
+    }
+    98%{
+        opacity: 1;
+        display: block;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+    
+}
+.loading{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 20;
+    background-color: white;
+    padding: 100px 0;
+    font-size: 50px;
+    animation: animLoading 3s forwards;
+    
+}
+/* Deuxième animation*/
+.restaurants{
+    .fa-solid{
+        position: relative;
+        left:53%;
+        opacity: 0;
+        z-index: 2;
+        transition: all 1s;
+        &:hover{
+            opacity: 1;
+            color:red;
+            .fa-regular{
+                opacity: 0;
+            }
+        }
+    }
+    .fa-regular{
+        position:relative;
+        left:60%;
+        z-index: 3;
+        cursor: pointer;
+        transition: all 1s;
+        &:hover{
+            opacity: 0;
+            .fa-solid{
+                opacity: 1;
+            }
+        }
+    }
+}
+/* Troisième animation*/
+@keyframes rotateCheck {
+    0%{
+        transform: rotate(550deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
+/* Dernière animation*/
 
 p, span, a{
     font-family: roboto;
@@ -32,18 +101,7 @@ h1, h2, h3, h4{
 body{
     margin:0;
 }
-/* Première animation*/
-.loading{
-    margin: 50% auto;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 20;
-    background-color: white;
-    padding: 100px 0;
-    font-size: 50px;
-}
+
 /*HEADER*/
 header{
     width: 100%;
@@ -102,7 +160,6 @@ footer{
         color:black;
     }
 }
-
 .reservation{
     background-color: #f3f3f3;
     opacity: 0.8;
@@ -154,7 +211,10 @@ footer{
         color:black;
         margin: 10px 0;
         i{
-            margin: 0 60px 0 30px;
+            margin: 0 10% 0 30px;
+        }
+        span{
+            font-size:small;
         }
 
     }
@@ -168,7 +228,7 @@ footer{
         position:relative;
         top:26px;
         left:10px;
-        z-index: 999;
+        z-index: 19;
         vertical-align: auto;
         font-size: 15px;
     }
@@ -209,17 +269,8 @@ footer{
                 color:grey;
             }
             i{
-                margin: 0 0 0 70%;
                 cursor: pointer;
-                &:hover{
-                    color:red;
-                    -webkit-text-fill-color: red;
-                    animation-name:fa-beat;
-                    animation-delay:var(0s);
-                    animation-direction:var(normal);
-                    animation-duration: (1s);
-                    animation-timing-function: var(in-and-out);
-                }
+
             }
         }
     }
@@ -228,26 +279,26 @@ footer{
     /*MAIN*/
 .gout-background-img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     background-image: url(img/restaurants/lapalettedugout.jpg);
-    background-size: contain;  
+    background-size: cover;  
 }
 /*La note enchantée*/
     /*MAIN*/
 .enchantee-background-img{
     width: 100%;
-    height: 350px;
-    background-image: url(img/restaurants/lanoteenchantee.jpg);
-    background-size: contain;
+    height: 250px;
+    background-image: url(img/restaurants/lanotenchantee.jpg);
+    background-size: cover;
 }
 
 /*A la française*/
     /*MAIN*/
 .background-img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     background-image: url(img/restaurants/alafrancaise.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 .menus{
     padding: 40px 30px;
@@ -282,44 +333,35 @@ footer{
         }
     }
     
-   /* h2:after{
-        content: "";
-        width: 50%;
-        height: 1px;
-        border-bottom: 1px solid rgba(85, 194, 176, 0.562);
-    }*/
     article{
         width: 95%;
         background-color: white;
         margin:20px auto;
-        border-radius: 15px;
+        border-radius: 20px;
         cursor:pointer;
         display: flex;
         height: 76px;
-
         .dishes{
-            width: 70%;
+            width: 210px;
             padding:20px 0 20px 15px;
-            overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-
-            &:hover{
-
-                h3,span{
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-
-                }
-
-                .hover{
-                    display: block;
-                    width: 30%;
-                    padding:0;
-                    border-radius: 0 20px 20px 0;
-                    background-color: #9356DC;
-                    text-align:center;
+            overflow: hidden;
+        }
+        &:hover{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            .hover{
+                display: block;
+                width: 30%;
+                padding:0;
+                border-radius: 0 20px 20px 0;
+                background-color: #9356DC;
+                text-align:center;
+                i{
+                    margin-top:38%;
+                    animation: rotateCheck .5s;
                 }
             }
             .prix{
@@ -363,16 +405,16 @@ footer{
      /*MAIN*/
 .sens-background-img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     background-image: url(img/restaurants/ledelicedessens.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 
 }
 /*TABLET*/
 @media screen and (min-width: 700px) and (max-width:985px) {
 /*Accueil*/
-    
+   
 /*MAIN*/
 .subtitle{
     display: flex;
@@ -388,15 +430,6 @@ footer{
         margin: 0 auto 0 2px;
         color:black;
     }
-}
-.loading{
-    margin: 20px auto;
-    text-align: center;
-    /*
-    i{
-        display-duration:2s;
-    }
-    */
 }
 .reservation{
     background-color: #f3f3f3;
@@ -448,6 +481,7 @@ footer{
         padding: 20px 0;
         color:black;
         margin: 10px 0;
+        font-size: small;
         i{
             margin: 0 60px 0 30px;
         }
@@ -463,7 +497,7 @@ footer{
         position:relative;
         top:26px;
         left:10px;
-        z-index: 999;
+        z-index: 19;
         vertical-align: auto;
         font-size: 15px;
     }
@@ -504,17 +538,8 @@ footer{
                 color:grey;
             }
             i{
-                margin: 0 0 0 70%;
                 cursor: pointer;
-                &:hover{
-                    color:red;
-                    -webkit-text-fill-color: red;
-                    animation-name:fa-beat;
-                    animation-delay:var(0s);
-                    animation-direction:var(normal);
-                    animation-duration: (1s);
-                    animation-timing-function: var(in-and-out);
-                }
+
             }
         }
     }
@@ -523,25 +548,24 @@ footer{
     /*MAIN*/
 .gout-background-img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     background-image: url(img/restaurants/lapalettedugout.jpg);
     background-size: contain;  
 }
 /*La note enchantée*/
     /*MAIN*/
-    .enchantee-background-img{
-        width: 100%;
-        height: 350px;
-        background-image: url(img/restaurants/lanoteenchantee.jpg);
-        background-size: contain;
-    }
-    
+.enchantee-background-img{
+    width: 100%;
+    height: 250px;
+    background-image: url(img/restaurants/lanotenchantee.jpg);
+    background-size: contain;
+}
 
 /*A la française*/
     /*MAIN*/
 .background-img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     background-image: url(img/restaurants/alafrancaise.jpg);
     background-size: contain;
 }
@@ -606,12 +630,8 @@ footer{
                 background-color: #9356DC;
                 text-align:center;
                 i{
-                    margin-top: 30%;
-                    /*fa-animation-direction: reverse;*/
-                    animation-name: fa-spin;
-                    animation-duration: var(--fa-animation-duration,2s);
-                    animation-iteration-count: var(--fa-animation-iteration-count,1.5s);
-                    animation-timing-function: var(--fa-animation-timing,linear);
+                    margin-top:35%;
+                    animation: rotateCheck .5s;
                 }
             }
             .prix{
@@ -655,7 +675,7 @@ footer{
      /*MAIN*/
 .sens-background-img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     background-image: url(img/restaurants/ledelicedessens.jpg);
     background-size: contain;
 }
@@ -665,6 +685,7 @@ footer{
 @media screen and (min-width: 985px) and (max-width:1400px) {
 /*Accueil*/
     
+   
 /*MAIN*/
 .subtitle{
     display: flex;
@@ -680,15 +701,6 @@ footer{
         margin: 0 auto 0 2px;
         color:black;
     }
-}
-.loading{
-    margin: 20px auto;
-    text-align: center;
-    /*
-    i{
-        display-duration:2s;
-    }
-    */
 }
 .reservation{
     background-color: #f3f3f3;
@@ -796,17 +808,8 @@ footer{
                 color:grey;
             }
             i{
-                margin: 0 0 0 70%;
                 cursor: pointer;
-                &:hover{
-                    color:red;
-                    -webkit-text-fill-color: red;
-                    animation-name:fa-beat;
-                    animation-delay:var(0s);
-                    animation-direction:var(normal);
-                    animation-duration: (1s);
-                    animation-timing-function: var(in-and-out);
-                }
+
             }
         }
     }
@@ -815,25 +818,24 @@ footer{
     /*MAIN*/
 .gout-background-img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     background-image: url(img/restaurants/lapalettedugout.jpg);
     background-size: contain;  
 }
 /*La note enchantée*/
     /*MAIN*/
-    .enchantee-background-img{
-        width: 100%;
-        height: 350px;
-        background-image: url(img/restaurants/lanoteenchantee.jpg);
-        background-size: contain;
-    }
-    
+.enchantee-background-img{
+    width: 100%;
+    height: 250px;
+    background-image: url(img/restaurants/lanotenchantee.jpg);
+    background-size: contain;
+}
 
 /*A la française*/
     /*MAIN*/
 .background-img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     background-image: url(img/restaurants/alafrancaise.jpg);
     background-size: contain;
 }
@@ -898,12 +900,8 @@ footer{
                 background-color: #9356DC;
                 text-align:center;
                 i{
-                    margin-top: 30%;
-                    /*fa-animation-direction: reverse;*/
-                    animation-name: fa-spin;
-                    animation-duration: var(--fa-animation-duration,2s);
-                    animation-iteration-count: var(--fa-animation-iteration-count,1.5s);
-                    animation-timing-function: var(--fa-animation-timing,linear);
+                    margin-top:35%;
+                    animation: rotateCheck .5s;
                 }
             }
             .prix{
@@ -947,7 +945,7 @@ footer{
      /*MAIN*/
 .sens-background-img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     background-image: url(img/restaurants/ledelicedessens.jpg);
     background-size: contain;
 }
