@@ -466,11 +466,13 @@ footer{
     }
     .flex{
         display: flex;
-        flex-direction:column;
+        flex-direction:row;
         width: 98%;
+        margin:auto;
         .row-flex{
             display: flex;
             flex-direction: row;
+            width: 31%;
         }
     }
     .btn{
@@ -483,7 +485,7 @@ footer{
         margin: 10px 0;
         font-size: small;
         i{
-            margin: 0 60px 0 30px;
+            margin: 0 10% 0 30px;
         }
 
     }
@@ -512,10 +514,10 @@ footer{
     }
     .flex{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
     article{
-        width: 80%;
+        width: 48%;
         height: 250px;
         margin: 10px auto;
         background-color: white;
@@ -550,7 +552,7 @@ footer{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/lapalettedugout.jpg);
-    background-size: contain;  
+    background-size: cover;  
 }
 /*La note enchantée*/
     /*MAIN*/
@@ -558,7 +560,7 @@ footer{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/lanotenchantee.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 
 /*A la française*/
@@ -567,7 +569,7 @@ footer{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/alafrancaise.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 .menus{
     padding: 40px 30px;
@@ -602,12 +604,6 @@ footer{
         }
     }
     
-   /* h2:after{
-        content: "";
-        width: 50%;
-        height: 1px;
-        border-bottom: 1px solid rgba(85, 194, 176, 0.562);
-    }*/
     article{
         width: 95%;
         background-color: white;
@@ -630,13 +626,13 @@ footer{
                 background-color: #9356DC;
                 text-align:center;
                 i{
-                    margin-top:35%;
+                    margin-top:15%;
                     animation: rotateCheck .5s;
                 }
             }
             .prix{
                 text-align: end;
-                padding-top:6%;
+                padding-top:4%;
             }  
         }
         h3{
@@ -677,7 +673,7 @@ footer{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/ledelicedessens.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 
 }
@@ -737,11 +733,12 @@ footer{
     }
     .flex{
         display: flex;
-        flex-direction:column;
+        flex-direction:row;
         width: 98%;
         .row-flex{
             display: flex;
             flex-direction: row;
+            width: 31%;
         }
     }
     .btn{
@@ -782,10 +779,10 @@ footer{
     }
     .flex{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
     article{
-        width: 80%;
+        width: 48%;
         height: 250px;
         margin: 10px auto;
         background-color: white;
@@ -820,7 +817,7 @@ footer{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/lapalettedugout.jpg);
-    background-size: contain;  
+    background-size: cover;  
 }
 /*La note enchantée*/
     /*MAIN*/
@@ -828,7 +825,7 @@ footer{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/lanotenchantee.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 
 /*A la française*/
@@ -837,7 +834,7 @@ footer{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/alafrancaise.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 .menus{
     padding: 40px 30px;
@@ -872,12 +869,6 @@ footer{
         }
     }
     
-   /* h2:after{
-        content: "";
-        width: 50%;
-        height: 1px;
-        border-bottom: 1px solid rgba(85, 194, 176, 0.562);
-    }*/
     article{
         width: 95%;
         background-color: white;
@@ -900,13 +891,13 @@ footer{
                 background-color: #9356DC;
                 text-align:center;
                 i{
-                    margin-top:35%;
+                    margin-top:15%;
                     animation: rotateCheck .5s;
                 }
             }
             .prix{
                 text-align: end;
-                padding-top:6%;
+                padding-top:4%;
             }  
         }
         h3{
@@ -947,7 +938,7 @@ footer{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/ledelicedessens.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 
 }
