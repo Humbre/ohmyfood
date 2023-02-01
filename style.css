@@ -1,171 +1,12 @@
 @charset "UTF-8";
-/*REGLAGES GENERAUX*/
-/* Première animation*/
-@keyframes animLoading {
-  0% {
-    opacity: 1;
-    display: block;
-    z-index: 99;
-  }
-  98% {
-    opacity: 1;
-    display: block;
-    z-index: 99;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-    z-index: -1;
-  }
-}
-.loading {
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 20;
-  background-color: white;
-  padding: 100px 0;
-  font-size: 50px;
-  animation: animLoading 3s forwards;
-}
+@import url(header.css);
+@import url(footer.css);
+@import url(general.css);
+@import url(animation.css);
 
-/* Deuxième animation*/
-.restaurants .fa-solid {
-  position: relative;
-  left: 54.2%;
-  opacity: 0;
-  z-index: 2;
-  transition: all 1s;
-}
-.restaurants .fa-regular {
-  position: relative;
-  left: 60%;
-  z-index: 3;
-  cursor: pointer;
-  transition: all 1s;
-}
-.restaurants .fa-regular:hover {
-  opacity: 0;
-}
-.restaurants .fa-regular:hover + i {
-  opacity: 1;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
-/* Troisième animation*/
-@keyframes rotateCheck {
-  0% {
-    transform: translateX(150%) rotate(-550deg);
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-  }
-}
-/* Dernière animation*/
-@keyframes fourthAnim {
-  0% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-.appetizer article:first-child, .main-course article:first-child, .desert article:first-child {
-  animation: fourthAnim 3s both;
-}
-
-.appetizer article:nth-child(2n), .main-course article:nth-child(2n), .desert article:nth-child(2n) {
-  animation: fourthAnim 3s both;
-  animation-delay: 0.3s;
-}
-
-.appetizer article:nth-child(3n), .main-course article:nth-child(3n), .desert article:nth-child(3n) {
-  animation: fourthAnim 3s both;
-  animation-delay: 0.45s;
-}
-
-.appetizer article:last-child, .main-course article:last-child, .desert article:last-child {
-  animation: fourthAnim 3s both;
-  animation-delay: 0.6s;
-}
-
-/* reglages generaux*/
-p, span, a {
-  font-family: roboto;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-h1, h2, h3, h4 {
-  font-family: "Shrikhand";
-}
-@font-face {
-  h1, h2, h3, h4 {
-    font-family: "Shrikhand";
-    src: url("./font/Shrikhand.ttf");
-  }
-}
-
-.btn {
-  padding: 10px 0 10px 0;
-  margin: auto;
-  /* border-radius:30px;*/
-  box-shadow: 0px 0.5px 4px 1px rgb(102, 102, 102);
-}
-
-body {
-  margin: 0;
-}
-
-/*HEADER*/
-header {
-  width: 100%;
-  margin: 0;
-  padding: 10px 0 5px 0;
-  background-color: white;
-  box-shadow: 0px 0.5px 4px 1px rgb(102, 102, 102);
-}
-header .logo {
-  width: 30%;
-  margin: 10px auto;
-  display: flex;
-}
-header i {
-  position: relative;
-  top: 30px;
-  left: 30px;
-}
-
-/*FOOTER*/
-footer {
-  padding: 15px 0 15px 20px;
-  background-color: #5c5c5c;
-  color: white;
-}
-footer .logo {
-  width: 20%;
-  color: white;
-}
-footer .flex {
-  margin-top: 5px;
-}
-footer .flex a {
-  color: white;
-}
 
 /*RESPONSIVE*/
 @media screen and (max-width: 700px) {
-  /*Accueil*/
   /*MAIN*/
   .subtitle {
     display: flex;
@@ -241,18 +82,19 @@ footer .flex a {
     font-size: small;
   }
   .functionning .little-btn {
+    font-size: 20px;
+    /* font: 25px Arial, sans-serif; */
     background-color: #9356DC;
-    border-radius: 20px;
+    border-radius: 50%;
     width: 25px;
     height: 25px;
     text-align: center;
     color: white;
     position: relative;
-    top: 26px;
+    top: 20px;
     left: 10px;
-    z-index: 2;
-    vertical-align: auto;
-    font-size: 15px;
+    z-index: 5;
+    padding: 8px;
   }
   .restaurants {
     width: 100%;
@@ -282,7 +124,11 @@ footer .flex a {
     opacity: unset;
   }
   .restaurants article .text {
-    margin: 12px 15px;
+    margin: 15px 15px;
+  }
+  .restaurants article .text p {
+    margin: 0 !important;
+    width: 50%;
   }
   .restaurants article .text .h4 {
     font-weight: bold;
@@ -307,7 +153,7 @@ footer .flex a {
   .enchante-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(imgrestaurantslanotenchantee.jpg);
+    background-image: url(img/restaurants/lanotenchantee.jpg);
     background-size: cover;
   }
   /*A la française*/
@@ -371,6 +217,7 @@ footer .flex a {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    transition: transform;
   }
   .menus article:hover .hover {
     display: block;
@@ -379,10 +226,11 @@ footer .flex a {
     border-radius: 0 20px 20px 0;
     background-color: #99E2D0;
     text-align: center;
+    transition: animation 1s cubic-bezier(0.44, -0.57, 0.69, 0.46);
   }
   .menus article:hover .hover i {
     margin-top: 35%;
-    animation: rotateCheck 1s ease-out;
+    animation: rotateCheck 1s;
   }
   .menus article:hover .hover .dishes {
     width: 60%;
@@ -394,6 +242,9 @@ footer .flex a {
   .menus article h3 {
     font-size: 16px;
     margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .menus article h4 {
     font-size: 14px;
@@ -509,18 +360,19 @@ footer .flex a {
     margin: 0 10% 0 30px;
   }
   .functionning .little-btn {
+    font-size: 20px;
+    /* font: 25px Arial, sans-serif; */
     background-color: #9356DC;
-    border-radius: 20px;
+    border-radius: 50%;
     width: 25px;
     height: 25px;
     text-align: center;
     color: white;
     position: relative;
-    top: 26px;
+    top: 20px;
     left: 10px;
     z-index: 5;
-    vertical-align: auto;
-    font-size: 15px;
+    padding: 8px;
   }
   .restaurants {
     width: 100%;
@@ -550,7 +402,11 @@ footer .flex a {
     opacity: unset;
   }
   .restaurants article .text {
-    margin: 12px 15px;
+    margin: 15px 15px;
+  }
+  .restaurants article .text p {
+    margin: 0 !important;
+    width: 50%;
   }
   .restaurants article .text .h4 {
     font-weight: bold;
@@ -639,10 +495,11 @@ footer .flex a {
     border-radius: 0 20px 20px 0;
     background-color: #99E2D0;
     text-align: center;
+    transition: all 0.5s;
   }
   .menus article:hover .hover i {
     margin-top: 15%;
-    animation: rotateCheck 1s;
+    animation: rotateCheck 0.5s;
   }
   .menus article:hover .prix {
     text-align: end;
@@ -760,18 +617,19 @@ footer .flex a {
     margin: 0 60px 0 30px;
   }
   .functionning .little-btn {
+    font-size: 20px;
+    /* font: 25px Arial, sans-serif; */
     background-color: #9356DC;
-    border-radius: 20px;
+    border-radius: 50%;
     width: 25px;
     height: 25px;
     text-align: center;
     color: white;
     position: relative;
-    top: 26px;
+    top: 20px;
     left: 10px;
     z-index: 5;
-    vertical-align: auto;
-    font-size: 15px;
+    padding: 8px;
   }
   .restaurants {
     width: 100%;
@@ -801,7 +659,11 @@ footer .flex a {
     opacity: unset;
   }
   .restaurants article .text {
-    margin: 12px 15px;
+    margin: 15px 15px;
+  }
+  .restaurants article .text p {
+    margin: 0 !important;
+    width: 50%;
   }
   .restaurants article .text .h4 {
     font-weight: bold;
@@ -894,10 +756,11 @@ footer .flex a {
     border-radius: 0 20px 20px 0;
     background-color: #99E2D0;
     text-align: center;
+    transition: all 0.6s ease-in-out;
   }
   .menus article:hover .hover i {
     margin-top: 12%;
-    animation: rotateCheck 1s;
+    animation: rotateCheck 0.5s;
   }
   .menus article:hover .prix {
     text-align: end;

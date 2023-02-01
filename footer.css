@@ -1,0 +1,18 @@
+/*FOOTER*/
+footer {
+  padding: 15px 0 15px 20px;
+  background-color: #5c5c5c;
+  color: white;
+}
+footer .logo {
+  width: 20%;
+  color: white;
+}
+footer .flex {
+  margin-top: 5px;
+}
+footer .flex a {
+  color: white;
+}
+
+/*# sourceMappingURL=footer.css.map */

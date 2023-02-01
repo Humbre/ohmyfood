@@ -1,184 +1,7 @@
-/*REGLAGES GENERAUX*/
-%primary{
-    color:#9356DC;
-}
-%secondary{
-    color:#FF79DA;
-}
-%tertiary{
-    color:#99E2D0;
-}
-/* Première animation*/
-@keyframes animLoading {
-    0%{
-        opacity: 1;
-        display: block;
-        z-index: 99;
-    }
-    98%{
-        opacity: 1;
-        display: block;
-        z-index: 99;
-    }
-    100%{
-        opacity: 0;
-        display: none;
-        z-index: -1;
-    }
-    
-}
-.loading{
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 20;
-    background-color: white;
-    padding: 100px 0;
-    font-size: 50px;
-    animation: animLoading 3s forwards;
-    
-}
-/* Deuxième animation*/
-.restaurants{
-    .fa-solid{
-        position: relative;
-        left:54.2%;
-        opacity: 0;
-        z-index: 2;
-        transition: all 1s;
-    }
-    .fa-regular{
-        position:relative;
-        left:60%;
-        z-index: 3;
-        cursor: pointer;
-        transition: all 1s;
-        &:hover{
-            opacity: 0;
-
-        }
-        &:hover+i{
-            opacity: 1;
-            background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-        }
-    }
-}
-/* Troisième animation*/
-@keyframes rotateCheck {
-    0%{
-        transform:translateX(150%) rotate(-550deg) ;
-    }
-    100%{
-        transform:translateX(0) rotate(0deg) ;
-    }
-    
-}
-/* Dernière animation*/
-@keyframes fourthAnim{
-    0%{
-        transform: translateY(15px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-.appetizer article, .main-course article, .desert article{
-    &:first-child{
-        animation: fourthAnim 3s both;
-    }
-}
-.appetizer article, .main-course article, .desert article{
-    &:nth-child(2n){
-        animation: fourthAnim 3s both;
-        animation-delay: 0.3s;
-    }
-}
-.appetizer article, .main-course article, .desert article{
-    &:nth-child(3n){
-        animation: fourthAnim 3s both;
-        animation-delay: 0.45s;
-    }
-}
-.appetizer article, .main-course article, .desert article{
-    &:last-child{
-        animation: fourthAnim 3s both;
-        animation-delay:0.6s;
-    }
-}
-
-/* reglages generaux*/
-p, span, a{
-    font-family: roboto;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-h1, h2, h3, h4{
-    @font-face {
-        font-family: 'Shrikhand';
-        src: url('./font/Shrikhand.ttf');
-    }
-    font-family: 'Shrikhand';
-}
-.btn{
-    padding: 10px 0 10px 0;
-    margin:auto;
-   /* border-radius:30px;*/
-    box-shadow: 0px 0.5px 4px 1px rgb(102, 102, 102);
-}
-body{
-    margin:0;
-}
-
-/*HEADER*/
-header{
-    width: 100%;
-    margin:0;
-    padding: 10px 0 5px 0;
-    background-color: white;
-    box-shadow: 0px 0.5px 4px 1px rgb(102, 102, 102);
-
-    .logo{
-        width: 30%;
-        margin: 10px auto;
-        display: flex;
-    }
-    i{
-        position: relative;
-        top: 30px;
-        left:30px;
-    }
-}
-
-/*FOOTER*/
-footer{
-    padding: 15px 0 15px 20px;
-    background-color: #5c5c5c;
-    color:white;
-    .logo{
-        width: 20%;
-        color:white;
-    }
-    .flex{
-        margin-top:5px;
-        a{
-            color:white;
-        }
-    }
-
-}
 
 /*RESPONSIVE*/
 @media screen and (max-width: 700px) {
-/*Accueil*/
+
     
 /*MAIN*/
 .subtitle{
@@ -255,18 +78,20 @@ footer{
 
     }
     .little-btn{
+        font-size: 20px;
+        /* font: 25px Arial, sans-serif; */
         background-color: #9356DC;
-        border-radius:20px;
+        border-radius: 50%;
         width: 25px;
         height: 25px;
         text-align: center;
-        color:white;
-        position:relative;
-        top:26px;
-        left:10px;
-        z-index: 2;
-        vertical-align: auto;
-        font-size: 15px;
+        color: white;
+        position: relative;
+        top: 20px;
+        left: 10px;
+        z-index: 5;
+        padding: 8px;
+
     }
 }
 .restaurants{
@@ -296,7 +121,11 @@ footer{
             opacity: unset;
         }
         .text{
-            margin: 12px 15px;
+            margin: 15px 15px;
+            p{
+                margin: 0 !important;
+                width: 50%;
+            }
             .h4{
                 font-weight: bold;
             }
@@ -324,7 +153,7 @@ footer{
 .enchante-background-img{
     width: 100%;
     height: 250px;
-    background-image: url(img\restaurants\lanotenchantee.jpg);
+    background-image: url(img/restaurants/lanotenchantee.jpg);
     background-size: cover;
 }
 
@@ -388,6 +217,7 @@ footer{
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+            transition: transform;
             .hover{
                 display: block;
                 width: 30%;
@@ -395,10 +225,13 @@ footer{
                 border-radius: 0 20px 20px 0;
                 background-color:#99E2D0;
                 text-align:center;
+                transition:animation 1s cubic-bezier(.44,-0.57,.69,.46);
                 i{
                     margin-top:35%;
-                    animation: rotateCheck 1s ease-out;
+                    animation: rotateCheck 1s;
+
                 }
+                
                 .dishes{
                     width: 60%;
                 }
@@ -411,6 +244,9 @@ footer{
         h3{
             font-size: 16px;
             margin:0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
             
         }
         h4{
@@ -532,18 +368,19 @@ footer{
 
     }
     .little-btn{
+        font-size: 20px;
+        /* font: 25px Arial, sans-serif; */
         background-color: #9356DC;
-        border-radius:20px;
+        border-radius: 50%;
         width: 25px;
         height: 25px;
         text-align: center;
-        color:white;
-        position:relative;
-        top:26px;
-        left:10px;
+        color: white;
+        position: relative;
+        top: 20px;
+        left: 10px;
         z-index: 5;
-        vertical-align: auto;
-        font-size: 15px;
+        padding: 8px;
     }
 }
 .restaurants{
@@ -573,7 +410,11 @@ footer{
             opacity: unset;
         }
         .text{
-            margin: 12px 15px;
+            margin: 15px 15px;
+            p{
+                margin: 0 !important;
+                width: 50%;
+            }
             .h4{
                 font-weight: bold;
             }
@@ -667,9 +508,10 @@ footer{
                 border-radius: 0 20px 20px 0;
                 background-color: #99E2D0;
                 text-align:center;
+                transition: all .5s;
                 i{
                     margin-top:15%;
-                    animation: rotateCheck 1s;
+                    animation: rotateCheck .5s;
                 }
             }
             .prix{
@@ -797,18 +639,19 @@ footer{
 
     }
     .little-btn{
+        font-size: 20px;
+        /* font: 25px Arial, sans-serif; */
         background-color: #9356DC;
-        border-radius:20px;
+        border-radius: 50%;
         width: 25px;
         height: 25px;
         text-align: center;
-        color:white;
-        position:relative;
-        top:26px;
-        left:10px;
+        color: white;
+        position: relative;
+        top: 20px;
+        left: 10px;
         z-index: 5;
-        vertical-align: auto;
-        font-size: 15px;
+        padding: 8px;
     }
 }
 .restaurants{
@@ -838,7 +681,11 @@ footer{
             opacity: unset;
         }
         .text{
-            margin: 12px 15px;
+            margin: 15px 15px;
+            p{
+                margin: 0 !important;
+                width: 50%;
+            }
             .h4{
                 font-weight: bold;
             }
@@ -936,9 +783,10 @@ footer{
                 border-radius: 0 20px 20px 0;
                 background-color: #99E2D0;
                 text-align:center;
+                transition: all .6s ease-in-out;
                 i{
                     margin-top:12%;
-                    animation: rotateCheck 1s;
+                    animation: rotateCheck .5s ;
                 }
             }
             .prix{
