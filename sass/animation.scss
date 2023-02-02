@@ -32,35 +32,40 @@
 }
 /* Deuxième animation*/
 .restaurants{
-    .fa-solid{
+    .heart{
+        width: 17px;
+        height: 17px;
         position: relative;
         bottom:20px;
         left:84%;
-        opacity: 0;
-        z-index: 2;
-        transition: all 1s;
-        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .fa-regular{
-        position:relative;
-        left:90%;
-        bottom:20px;
-        z-index: 3;
-        cursor: pointer;
-        transition: all 1s forwards;
-        &:hover{
-            opacity: 0;
 
-        }
-        &:hover+i{
-            opacity: 1;
+        .fa-solid{
+            position: absolute;
+            opacity: 0;
+            z-index: 2;
+            transition: all 1s;
             background: linear-gradient(to bottom right, #FF79DA, #9356DC);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .fa-regular{
+            position: absolute;
+            z-index: 3;
+            cursor: pointer;
+            transition: all 1s forwards;
+            &:hover{
+                opacity: 0;
+    
+            }
+            &:hover+i{
+                opacity: 1;
+                background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
     }
+    
 }
 /* Troisième animation*/
 @keyframes rotateCheck {
