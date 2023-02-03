@@ -7,9 +7,8 @@
 
 /*RESPONSIVE*/
 @media screen and (max-width: 700px) {
-
     
-/*MAIN*/
+/*Accueil*/
 .subtitle{
     display: flex;
     padding: 15px 0;
@@ -81,7 +80,6 @@
         span{
             font-size:small;
         }
-
     }
     .little-btn{
         font-size: 20px;
@@ -97,7 +95,6 @@
         left: 10px;
         z-index: 5;
         padding: 8px;
-
     }
 }
 .restaurants{
@@ -147,7 +144,6 @@
     }
 }
 /*La palette du goût*/
-    /*MAIN*/
 .gout-background-img{
     width: 100%;
     height: 250px;
@@ -155,7 +151,6 @@
     background-size: cover;  
 }
 /*La note enchantée*/
-    /*MAIN*/
 .enchante-background-img{
     width: 100%;
     height: 250px;
@@ -164,7 +159,6 @@
 }
 
 /*A la française*/
-    /*MAIN*/
 .background-img{
     width: 100%;
     height: 250px;
@@ -202,7 +196,6 @@
             font-size: 26px;
         }
     }
-    
     article{
         width: 95%;
         background-color: white;
@@ -230,13 +223,11 @@
                 border-radius: 0 20px 20px 0;
                 background-color:#99E2D0;
                 text-align:center;
-                transition:animation 1s cubic-bezier(.44,-0.57,.69,.46);
+                transition:animation 1.5s cubic-bezier(.44,-0.57,.69,.46);
                 i{
                     margin-top:33px;
-                    animation: rotateCheck 1s;
-
+                    animation: rotateCheck 1.5s forwards;
                 }
-                
                 .dishes{
                     width: 60%;
                 }
@@ -252,7 +243,6 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            
         }
         h4{
             font-size: 14px;
@@ -280,24 +270,21 @@
         border-radius:20px;
     }
 }
-
 /*Le délice du sens*/
-     /*MAIN*/
 .sens-background-img{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/ledelicedessens.jpg);
     background-size: cover;
 }
-
 }
+
+
+
 /*TABLET*/
 @media screen and (min-width: 700px) and (max-width:985px) {
 /*Accueil*/
-/*position coeur*/
-.fa-solid{
-    left:55% !important;
-}
+
 /*MAIN*/
 .subtitle{
     display: flex;
@@ -370,7 +357,6 @@
         i{
             margin: 0 2px 0 10px;
         }
-
     }
     .little-btn{
         font-size: 20px;
@@ -406,7 +392,6 @@
         margin: 10px auto;
         background-color: white;
         border-radius: 15px;
-
         img{
             width: 100%;
             height: 70%;
@@ -435,7 +420,6 @@
     }
 }
 /*La palette du goût*/
-    /*MAIN*/
 .gout-background-img{
     width: 100%;
     height: 250px;
@@ -443,16 +427,13 @@
     background-size: cover;  
 }
 /*La note enchantée*/
-    /*MAIN*/
 .enchantee-background-img{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/lanotenchantee.jpg);
     background-size: cover;
 }
-
 /*A la française*/
-    /*MAIN*/
 .background-img{
     width: 100%;
     height: 250px;
@@ -512,10 +493,10 @@
                 border-radius: 0 20px 20px 0;
                 background-color: #99E2D0;
                 text-align:center;
-                transition: all .5s;
+                transition: all 1.5s;
                 i{
                     margin-top:15%;
-                    animation: rotateCheck .5s;
+                    animation: rotateCheck 1.5s forwards;
                 }
             }
             .prix{
@@ -554,23 +535,21 @@
         border-radius:20px;
     }
 }
-
 /*Le délice du sens*/
-     /*MAIN*/
 .sens-background-img{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/ledelicedessens.jpg);
     background-size: cover;
 }
-
 }
+
+
+
 /*DESKTOP*/
 @media screen and (min-width: 985px) and (max-width:1400px) {
+
 /*Accueil*/
-    
-   
-/*MAIN*/
 .subtitle{
     display: flex;
     padding: 15px 0;
@@ -640,7 +619,6 @@
         i{
             margin: 0 10px 0 20px;
         }
-
     }
     .little-btn{
         font-size: 20px;
@@ -704,12 +682,7 @@
         }
     }
 }
-/*position coeur*/
-.fa-solid{
-    left:56.2% !important;
-}
 /*La palette du goût*/
-    /*MAIN*/
 .gout-background-img{
     width: 100%;
     height: 250px;
@@ -717,16 +690,13 @@
     background-size: cover;  
 }
 /*La note enchantée*/
-    /*MAIN*/
 .enchantee-background-img{
     width: 100%;
     height: 250px;
     background-image: url(img/restaurants/lanotenchantee.jpg);
     background-size: cover;
 }
-
 /*A la française*/
-    /*MAIN*/
 .background-img{
     width: 100%;
     height: 250px;
@@ -786,10 +756,10 @@
                 border-radius: 0 20px 20px 0;
                 background-color: #99E2D0;
                 text-align:center;
-                transition: all .6s ease-in-out;
+                transition: all 1.5s ease-in-out;
                 i{
                     margin-top:12%;
-                    animation: rotateCheck .5s ;
+                    animation: rotateCheck 1.5s forwards ;
                 }
             }
             .prix{
@@ -837,5 +807,4 @@
     background-image: url(img/restaurants/ledelicedessens.jpg);
     background-size: cover;
 }
-
 }

@@ -67,7 +67,7 @@
   0% {
     transform: translateX(200%) rotate(-280deg);
   }
-  99% {
+  90% {
     transform: translateX(0) rotate(0deg);
   }
   100% {
