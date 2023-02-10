@@ -46,6 +46,11 @@
   -webkit-animation: animLoading 3s forwards;
           animation: animLoading 3s forwards;
 }
+.loading p {
+  width: 90%;
+  text-align: center;
+  font-size: medium;
+}
 
 /* Deuxième animation*/
 .restaurants .heart {
@@ -310,6 +315,11 @@ body {
   font-size: 50px;
   -webkit-animation: animLoading 3s forwards;
           animation: animLoading 3s forwards;
+}
+.loading p {
+  width: 90%;
+  text-align: center;
+  font-size: medium;
 }
 
 /* Deuxième animation*/
