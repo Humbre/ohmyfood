@@ -1,8 +1,8 @@
 
-@import 'header';
-@import 'footer';
-@import 'general';
-@import 'animation';
+@import '_header';
+@import '_footer';
+@import '_general';
+@import '_animation';
 
 
 /*RESPONSIVE*/
@@ -83,7 +83,6 @@
     }
     .little-btn{
         font-size: 20px;
-        /* font: 25px Arial, sans-serif; */
         background-color: #9356DC;
         border-radius: 50%;
         width: 25px;
@@ -211,31 +210,36 @@
             white-space: nowrap;
             overflow: hidden;
         }
+        .hover {
+            border-radius: 0 30% 30% 0;
+        }
+        i{
+            display: none;
+            
+        }
         &:hover{
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            transition: transform;
-            .hover{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        
+            i{
+                transform:unset;
                 display: block;
-                width: 30%;
+                /*animation: rotateCheck .5s .1s forwards;*/
+            }
+            .hover{
+                animation: hoverCheck .5s both ease-in;
                 padding:0;
-                border-radius: 0 20px 20px 0;
+                border-radius: 0 30% 30% 0;
                 background-color:#99E2D0;
                 text-align:center;
-                transition:animation 1.5s cubic-bezier(.44,-0.57,.69,.46);
-                i{
-                    margin-top:33px;
-                    animation: rotateCheck 1.5s forwards;
-                }
-                .dishes{
-                    width: 60%;
-                }
             }
             .prix{
-                text-align: end;
+                text-align: start;
                 padding-top:7.5%;
-            }  
+                width: 5%;
+            }
+
         }
         h3{
             font-size: 16px;
@@ -256,10 +260,7 @@
         text-align: right;
         padding:7.5% 20px 0 20px;
     }
-    .hover {
-        display: none;
-
-    }
+   
     .btn{
         width: 30%;
         margin:auto;
@@ -495,7 +496,6 @@
                 text-align:center;
                 transition: all 1.5s;
                 i{
-                    margin-top:15%;
                     animation: rotateCheck 1.5s forwards;
                 }
             }

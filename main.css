@@ -1,4 +1,159 @@
 @charset "UTF-8";
+/* Première animation*/
+@keyframes animLoading {
+  0% {
+    opacity: 1;
+    display: block;
+    z-index: 99;
+  }
+  98% {
+    opacity: 1;
+    display: block;
+    z-index: 99;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+.loading {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background-color: white;
+  padding: 100px 0;
+  font-size: 50px;
+  animation: animLoading 3s forwards;
+}
+
+/* Deuxième animation*/
+.restaurants .heart {
+  width: 17px;
+  height: 17px;
+  position: relative;
+  bottom: 20px;
+  left: 84%;
+}
+.restaurants .heart .fa-solid {
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  transition: all 1s;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants .heart .fa-regular {
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  transition: all 1s forwards;
+}
+.restaurants .heart .fa-regular:hover {
+  opacity: 0;
+}
+.restaurants .heart .fa-regular:hover + i {
+  opacity: 1;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Troisième animation*/
+@keyframes rotateCheck {
+  0% {
+    transform: translate(-200%, 20px) scale(1);
+  }
+  100% {
+    transform: translate(0px, 20px) scale(1) rotate(-180deg);
+  }
+}
+@keyframes endCheck {
+  0% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(200%, 20px);
+  }
+}
+@keyframes hoverCheck {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(4, 1);
+    transform-origin: 100% 50%;
+  }
+}
+/* Dernière animation*/
+@keyframes fourthAnim {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.appetizer article:first-child, .main-course article:first-child, .desert article:first-child {
+  animation: fourthAnim 3s both;
+}
+
+.appetizer article:nth-child(2n), .main-course article:nth-child(2n), .desert article:nth-child(2n) {
+  animation: fourthAnim 3s both;
+  animation-delay: 0.3s;
+}
+
+.appetizer article:nth-child(3n), .main-course article:nth-child(3n), .desert article:nth-child(3n) {
+  animation: fourthAnim 3s both;
+  animation-delay: 0.45s;
+}
+
+.appetizer article:nth-child(4n), .main-course article:nth-child(4n), .desert article:nth-child(4n) {
+  animation: fourthAnim 3s both;
+  animation-delay: 0.6s;
+}
+
+/*FOOTER*/
+footer {
+  padding: 15px 0 15px 20px;
+  background-color: #5c5c5c;
+  color: white;
+}
+footer .logo {
+  width: 20%;
+  color: white;
+}
+footer .flex {
+  margin-top: 5px;
+}
+footer .flex a {
+  color: white;
+}
+
+/*HEADER*/
+header {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 5px 0;
+  background-color: white;
+  box-shadow: 0px 0.5px 4px 1px rgb(102, 102, 102);
+}
+header .logo {
+  width: 30%;
+  margin: 10px auto;
+  display: flex;
+}
+header i {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
 /*HEADER*/
 header {
   width: 100%;
@@ -132,14 +287,27 @@ body {
 /* Troisième animation*/
 @keyframes rotateCheck {
   0% {
-    transform: translateX(200%) rotate(-280deg);
-  }
-  90% {
-    transform: translateX(0) rotate(0deg);
+    transform: translate(-200%, 20px) scale(1);
   }
   100% {
-    transform: translateX(350%) rotate(0deg);
-    overflow: hidden;
+    transform: translate(0px, 20px) scale(1) rotate(-180deg);
+  }
+}
+@keyframes endCheck {
+  0% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(200%, 20px);
+  }
+}
+@keyframes hoverCheck {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(4, 1);
+    transform-origin: 100% 50%;
   }
 }
 /* Dernière animation*/
@@ -167,7 +335,7 @@ body {
   animation-delay: 0.45s;
 }
 
-.appetizer article:last-child, .main-course article:last-child, .desert article:last-child {
+.appetizer article:nth-child(4n), .main-course article:nth-child(4n), .desert article:nth-child(4n) {
   animation: fourthAnim 3s both;
   animation-delay: 0.6s;
 }
@@ -250,7 +418,6 @@ body {
   }
   .functionning .little-btn {
     font-size: 20px;
-    /* font: 25px Arial, sans-serif; */
     background-color: #9356DC;
     border-radius: 50%;
     width: 25px;
@@ -376,31 +543,33 @@ body {
     white-space: nowrap;
     overflow: hidden;
   }
+  .menus article .hover {
+    border-radius: 0 30% 30% 0;
+  }
+  .menus article i {
+    display: none;
+  }
   .menus article:hover {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    transition: transform;
+  }
+  .menus article:hover i {
+    transform: unset;
+    display: block;
+    /*animation: rotateCheck .5s .1s forwards;*/
   }
   .menus article:hover .hover {
-    display: block;
-    width: 30%;
+    animation: hoverCheck 0.5s both ease-in;
     padding: 0;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 30% 30% 0;
     background-color: #99E2D0;
     text-align: center;
-    transition: animation 1.5s cubic-bezier(0.44, -0.57, 0.69, 0.46);
-  }
-  .menus article:hover .hover i {
-    margin-top: 33px;
-    animation: rotateCheck 1.5s forwards;
-  }
-  .menus article:hover .hover .dishes {
-    width: 60%;
   }
   .menus article:hover .prix {
-    text-align: end;
+    text-align: start;
     padding-top: 7.5%;
+    width: 5%;
   }
   .menus article h3 {
     font-size: 16px;
@@ -419,9 +588,6 @@ body {
     width: 10%;
     text-align: right;
     padding: 7.5% 20px 0 20px;
-  }
-  .menus .hover {
-    display: none;
   }
   .menus .btn {
     width: 30%;
@@ -652,7 +818,6 @@ body {
     transition: all 1.5s;
   }
   .menus article:hover .hover i {
-    margin-top: 15%;
     animation: rotateCheck 1.5s forwards;
   }
   .menus article:hover .prix {
@@ -946,5 +1111,35 @@ body {
     background-size: cover;
   }
 }
+/*REGLAGES GENERAUX*/
+p, span, a {
+  font-family: roboto;
+}
 
-/*# sourceMappingURL=styles.css.map */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Shrikhand";
+}
+@font-face {
+  h1, h2, h3, h4 {
+    font-family: "Shrikhand";
+    src: url("./font/Shrikhand.ttf");
+  }
+}
+
+.btn {
+  padding: 10px 0 10px 0;
+  margin: auto;
+  /* border-radius:30px;*/
+  box-shadow: 0px 0.5px 4px 1px rgb(102, 102, 102);
+}
+
+body {
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
