@@ -88,18 +88,18 @@
 /* Troisième animation*/
 @-webkit-keyframes rotateCheck {
   0% {
-    transform: translate(-200%, 20px) scale(1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(0px, 20px) scale(1) rotate(-180deg);
+    transform: rotate(1turn);
   }
 }
 @keyframes rotateCheck {
   0% {
-    transform: translate(-200%, 20px) scale(1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(0px, 20px) scale(1) rotate(-180deg);
+    transform: rotate(1turn);
   }
 }
 @-webkit-keyframes endCheck {
@@ -120,20 +120,18 @@
 }
 @-webkit-keyframes hoverCheck {
   0% {
-    transform: scale(1, 1);
+    width: 0;
   }
   100% {
-    transform: scale(4, 1);
-    transform-origin: 100% 50%;
+    width: 25%;
   }
 }
 @keyframes hoverCheck {
   0% {
-    transform: scale(1, 1);
+    width: 0;
   }
   100% {
-    transform: scale(4, 1);
-    transform-origin: 100% 50%;
+    width: 25%;
   }
 }
 /* Dernière animation*/
@@ -358,10 +356,10 @@ body {
 /* Troisième animation*/
 @keyframes rotateCheck {
   0% {
-    transform: translate(-200%, 20px) scale(1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(0px, 20px) scale(1) rotate(-180deg);
+    transform: rotate(1turn);
   }
 }
 @keyframes endCheck {
@@ -374,11 +372,10 @@ body {
 }
 @keyframes hoverCheck {
   0% {
-    transform: scale(1, 1);
+    width: 0;
   }
   100% {
-    transform: scale(4, 1);
-    transform-origin: 100% 50%;
+    width: 25%;
   }
 }
 /* Dernière animation*/
@@ -639,13 +636,14 @@ body {
     overflow: hidden;
   }
   .menus article:hover i {
-    transform: unset;
+    margin-top: 25px;
     display: block;
-    /*animation: rotateCheck .5s .1s forwards;*/
+    -webkit-animation: rotateCheck 0.5s;
+            animation: rotateCheck 0.5s;
   }
   .menus article:hover .hover {
-    -webkit-animation: hoverCheck 0.5s both ease-in;
-            animation: hoverCheck 0.5s both ease-in;
+    -webkit-animation: hoverCheck 0.2s both ease-in;
+            animation: hoverCheck 0.2s both ease-in;
     padding: 0;
     border-radius: 0 30% 30% 0;
     background-color: #99E2D0;
@@ -952,7 +950,7 @@ body {
   }
 }
 /*DESKTOP*/
-@media screen and (min-width: 985px) and (max-width: 1400px) {
+@media screen and (min-width: 985px) and (max-width: 2000px) {
   /*Accueil*/
   .subtitle {
     display: flex;

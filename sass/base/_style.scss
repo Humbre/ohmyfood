@@ -1,8 +1,8 @@
 
-@import '_header';
-@import '_footer';
+@import './animation/_general.scss';
+@import './layout/_footer';
 @import '_general';
-@import '_animation';
+@import './layout/_header';
 
 
 /*RESPONSIVE*/
@@ -214,8 +214,10 @@
             border-radius: 0 30% 30% 0;
         }
         i{
-            display: none;
-            
+            display: block;
+            transition:margin-right .5s;
+            margin-top:25px;
+            margin-right:50px;  
         }
         &:hover{
         text-overflow: ellipsis;
@@ -223,12 +225,12 @@
         overflow: hidden;
         
             i{
-                transform:unset;
+                margin-top:25px;
                 display: block;
-                /*animation: rotateCheck .5s .1s forwards;*/
+                animation: rotateCheck .5s ease-in ;
             }
             .hover{
-                animation: hoverCheck .5s both ease-in;
+                animation: hoverCheck .2s both ease-in;
                 padding:0;
                 border-radius: 0 30% 30% 0;
                 background-color:#99E2D0;
@@ -547,7 +549,7 @@
 
 
 /*DESKTOP*/
-@media screen and (min-width: 985px) and (max-width:1400px) {
+@media screen and (min-width: 985px) and (max-width:2000px) {
 
 /*Accueil*/
 .subtitle{
