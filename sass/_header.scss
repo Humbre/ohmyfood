@@ -1,0 +1,19 @@
+/*HEADER*/
+header{
+    width: 100%;
+    margin:0;
+    padding: 10px 0 5px 0;
+    background-color: white;
+    box-shadow: 0px 0.5px 4px 1px rgb(102, 102, 102);
+
+    .logo{
+        width: 30%;
+        margin: 10px auto;
+        display: flex;
+    }
+    i{
+        position: relative;
+        top: 30px;
+        left:30px;
+    }
+}

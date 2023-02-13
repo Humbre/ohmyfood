@@ -1,186 +1,4 @@
 @charset "UTF-8";
-/* Première animation*/
-@-webkit-keyframes animLoading {
-  0% {
-    opacity: 1;
-    display: block;
-    z-index: 99;
-  }
-  98% {
-    opacity: 1;
-    display: block;
-    z-index: 99;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-    z-index: -1;
-  }
-}
-@keyframes animLoading {
-  0% {
-    opacity: 1;
-    display: block;
-    z-index: 99;
-  }
-  98% {
-    opacity: 1;
-    display: block;
-    z-index: 99;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-    z-index: -1;
-  }
-}
-.loading {
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 20;
-  background-color: white;
-  padding: 100px 0;
-  font-size: 50px;
-  -webkit-animation: animLoading 3s forwards;
-          animation: animLoading 3s forwards;
-}
-.loading p {
-  width: 90%;
-  text-align: center;
-  font-size: medium;
-}
-
-/* Deuxième animation*/
-.restaurants .heart {
-  width: 17px;
-  height: 17px;
-  position: relative;
-  bottom: 20px;
-  left: 84%;
-}
-.restaurants .heart .fa-solid {
-  position: absolute;
-  opacity: 0;
-  z-index: 2;
-  transition: all 1s;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants .heart .fa-regular {
-  position: absolute;
-  z-index: 3;
-  cursor: pointer;
-  transition: all 1s forwards;
-}
-.restaurants .heart .fa-regular:hover {
-  opacity: 0;
-}
-.restaurants .heart .fa-regular:hover + i {
-  opacity: 1;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Troisième animation*/
-@-webkit-keyframes rotateCheck {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(1turn);
-  }
-}
-@keyframes rotateCheck {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(1turn);
-  }
-}
-@-webkit-keyframes endCheck {
-  0% {
-    transform: translate(0, 20px);
-  }
-  100% {
-    transform: translate(200%, 20px);
-  }
-}
-@keyframes endCheck {
-  0% {
-    transform: translate(0, 20px);
-  }
-  100% {
-    transform: translate(200%, 20px);
-  }
-}
-@-webkit-keyframes hoverCheck {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 25%;
-  }
-}
-@keyframes hoverCheck {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 25%;
-  }
-}
-/* Dernière animation*/
-@-webkit-keyframes fourthAnim {
-  0% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-@keyframes fourthAnim {
-  0% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-.appetizer article:first-child, .main-course article:first-child, .desert article:first-child {
-  -webkit-animation: fourthAnim 3s both;
-          animation: fourthAnim 3s both;
-}
-
-.appetizer article:nth-child(2n), .main-course article:nth-child(2n), .desert article:nth-child(2n) {
-  -webkit-animation: fourthAnim 3s both;
-          animation: fourthAnim 3s both;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.appetizer article:nth-child(3n), .main-course article:nth-child(3n), .desert article:nth-child(3n) {
-  -webkit-animation: fourthAnim 3s both;
-          animation: fourthAnim 3s both;
-  -webkit-animation-delay: 0.45s;
-          animation-delay: 0.45s;
-}
-
-.appetizer article:nth-child(4n), .main-course article:nth-child(4n), .desert article:nth-child(4n) {
-  -webkit-animation: fourthAnim 3s both;
-          animation: fourthAnim 3s both;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
 /*FOOTER*/
 footer {
   padding: 15px 0 15px 20px;
@@ -217,23 +35,35 @@ header i {
   left: 30px;
 }
 
-/*HEADER*/
-header {
-  width: 100%;
-  margin: 0;
-  padding: 10px 0 5px 0;
-  background-color: white;
+/*REGLAGES GENERAUX*/
+p, span, a {
+  font-family: roboto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Shrikhand";
+}
+@font-face {
+  h1, h2, h3, h4 {
+    font-family: "Shrikhand";
+    src: url("./font/Shrikhand.ttf");
+  }
+}
+
+.btn {
+  padding: 10px 0 10px 0;
+  margin: auto;
+  /* border-radius:30px;*/
   box-shadow: 0px 0.5px 4px 1px rgb(102, 102, 102);
 }
-header .logo {
-  width: 30%;
-  margin: 10px auto;
-  display: flex;
-}
-header i {
-  position: relative;
-  top: 30px;
-  left: 30px;
+
+body {
+  margin: 0;
 }
 
 /*FOOTER*/
@@ -284,135 +114,23 @@ body {
   margin: 0;
 }
 
-/* Première animation*/
-@keyframes animLoading {
-  0% {
-    opacity: 1;
-    display: block;
-    z-index: 99;
-  }
-  98% {
-    opacity: 1;
-    display: block;
-    z-index: 99;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-    z-index: -1;
-  }
-}
-.loading {
-  text-align: center;
+/*HEADER*/
+header {
   width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 20;
+  margin: 0;
+  padding: 10px 0 5px 0;
   background-color: white;
-  padding: 100px 0;
-  font-size: 50px;
-  -webkit-animation: animLoading 3s forwards;
-          animation: animLoading 3s forwards;
+  box-shadow: 0px 0.5px 4px 1px rgb(102, 102, 102);
 }
-.loading p {
-  width: 90%;
-  text-align: center;
-  font-size: medium;
+header .logo {
+  width: 30%;
+  margin: 10px auto;
+  display: flex;
 }
-
-/* Deuxième animation*/
-.restaurants .heart {
-  width: 17px;
-  height: 17px;
+header i {
   position: relative;
-  bottom: 20px;
-  left: 84%;
-}
-.restaurants .heart .fa-solid {
-  position: absolute;
-  opacity: 0;
-  z-index: 2;
-  transition: all 1s;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants .heart .fa-regular {
-  position: absolute;
-  z-index: 3;
-  cursor: pointer;
-  transition: all 1s forwards;
-}
-.restaurants .heart .fa-regular:hover {
-  opacity: 0;
-}
-.restaurants .heart .fa-regular:hover + i {
-  opacity: 1;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Troisième animation*/
-@keyframes rotateCheck {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(1turn);
-  }
-}
-@keyframes endCheck {
-  0% {
-    transform: translate(0, 20px);
-  }
-  100% {
-    transform: translate(200%, 20px);
-  }
-}
-@keyframes hoverCheck {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 25%;
-  }
-}
-/* Dernière animation*/
-@keyframes fourthAnim {
-  0% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-.appetizer article:first-child, .main-course article:first-child, .desert article:first-child {
-  -webkit-animation: fourthAnim 3s both;
-          animation: fourthAnim 3s both;
-}
-
-.appetizer article:nth-child(2n), .main-course article:nth-child(2n), .desert article:nth-child(2n) {
-  -webkit-animation: fourthAnim 3s both;
-          animation: fourthAnim 3s both;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.appetizer article:nth-child(3n), .main-course article:nth-child(3n), .desert article:nth-child(3n) {
-  -webkit-animation: fourthAnim 3s both;
-          animation: fourthAnim 3s both;
-  -webkit-animation-delay: 0.45s;
-          animation-delay: 0.45s;
-}
-
-.appetizer article:nth-child(4n), .main-course article:nth-child(4n), .desert article:nth-child(4n) {
-  -webkit-animation: fourthAnim 3s both;
-          animation: fourthAnim 3s both;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  top: 30px;
+  left: 30px;
 }
 
 /*RESPONSIVE*/
@@ -554,21 +272,21 @@ body {
   .gout-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/lapalettedugout.jpg);
+    background-image: url(../img/restaurants/lapalettedugout.jpg);
     background-size: cover;
   }
   /*La note enchantée*/
   .enchante-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/lanotenchantee.jpg);
+    background-image: url(../img/restaurants/lanotenchantee.jpg);
     background-size: cover;
   }
   /*A la française*/
   .background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/alafrancaise.jpg);
+    background-image: url(../img/restaurants/alafrancaise.jpg);
     background-size: cover;
   }
   .menus {
@@ -625,10 +343,12 @@ body {
     overflow: hidden;
   }
   .menus article .hover {
-    border-radius: 0 30% 30% 0;
+    border-radius: 0 18px 18px 0;
   }
   .menus article i {
-    display: none;
+    -webkit-animation: endCheck 0.2s forwards;
+            animation: endCheck 0.2s forwards;
+    margin-top: 25px;
   }
   .menus article:hover {
     text-overflow: ellipsis;
@@ -638,20 +358,20 @@ body {
   .menus article:hover i {
     margin-top: 25px;
     display: block;
-    -webkit-animation: rotateCheck 0.5s;
-            animation: rotateCheck 0.5s;
+    -webkit-animation: rotateCheck 0.5s ease-in;
+            animation: rotateCheck 0.5s ease-in;
   }
   .menus article:hover .hover {
     -webkit-animation: hoverCheck 0.2s both ease-in;
             animation: hoverCheck 0.2s both ease-in;
     padding: 0;
-    border-radius: 0 30% 30% 0;
+    border-radius: 0 20px 20px 0;
     background-color: #99E2D0;
     text-align: center;
   }
   .menus article:hover .prix {
     text-align: start;
-    padding-top: 7.5%;
+    padding-top: 5%;
     width: 5%;
   }
   .menus article h3 {
@@ -670,7 +390,7 @@ body {
   .menus .prix {
     width: 10%;
     text-align: right;
-    padding: 7.5% 20px 0 20px;
+    padding: 5% 20px 0 20px;
   }
   .menus .btn {
     width: 30%;
@@ -685,7 +405,7 @@ body {
   .sens-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/ledelicedessens.jpg);
+    background-image: url(../img/restaurants/ledelicedessens.jpg);
     background-size: cover;
   }
 }
@@ -830,21 +550,21 @@ body {
   .gout-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/lapalettedugout.jpg);
+    background-image: url(../img/restaurants/lapalettedugout.jpg);
     background-size: cover;
   }
   /*La note enchantée*/
   .enchantee-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/lanotenchantee.jpg);
+    background-image: url(../img/restaurants/lanotenchantee.jpg);
     background-size: cover;
   }
   /*A la française*/
   .background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/alafrancaise.jpg);
+    background-image: url(../img/restaurants/alafrancaise.jpg);
     background-size: cover;
   }
   .menus {
@@ -897,18 +617,24 @@ body {
     width: 70%;
     padding: 20px 0 20px 15px;
   }
-  .menus article:hover .hover {
+  .menus article i {
     display: block;
-    width: 30%;
+    margin-top: 25px;
+    -webkit-animation: endCheck 0.2s forwards;
+            animation: endCheck 0.2s forwards;
+  }
+  .menus article:hover .hover {
+    -webkit-animation: hoverCheck 0.2s both ease-in;
+            animation: hoverCheck 0.2s both ease-in;
     padding: 0;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 15px 15px 0;
     background-color: #99E2D0;
     text-align: center;
-    transition: all 1.5s;
   }
   .menus article:hover .hover i {
-    -webkit-animation: rotateCheck 1.5s forwards;
-            animation: rotateCheck 1.5s forwards;
+    margin-top: 25px;
+    -webkit-animation: rotateCheck 0.5s forwards;
+            animation: rotateCheck 0.5s forwards;
   }
   .menus article:hover .prix {
     text-align: end;
@@ -930,7 +656,7 @@ body {
     padding: 3.5% 20px 0 20px;
   }
   .menus .hover {
-    display: none;
+    border-radius: 0 18px 18px 0;
   }
   .menus .btn {
     width: 30%;
@@ -945,7 +671,7 @@ body {
   .sens-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/ledelicedessens.jpg);
+    background-image: url(../img/restaurants/ledelicedessens.jpg);
     background-size: cover;
   }
 }
@@ -1087,21 +813,21 @@ body {
   .gout-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/lapalettedugout.jpg);
+    background-image: url(../img/restaurants/lapalettedugout.jpg);
     background-size: cover;
   }
   /*La note enchantée*/
   .enchantee-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/lanotenchantee.jpg);
+    background-image: url(../img/restaurants/lanotenchantee.jpg);
     background-size: cover;
   }
   /*A la française*/
   .background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/alafrancaise.jpg);
+    background-image: url(../img/restaurants/alafrancaise.jpg);
     background-size: cover;
   }
   .menus {
@@ -1154,19 +880,25 @@ body {
     width: 70%;
     padding: 20px 0 20px 15px;
   }
+  .menus article i {
+    margin-top: 25px;
+    -webkit-animation: endCheck 0.2s forwards;
+            animation: endCheck 0.2s forwards;
+  }
   .menus article:hover .hover {
     display: block;
     width: 30%;
     padding: 0;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 15px 15px 0;
     background-color: #99E2D0;
     text-align: center;
-    transition: all 1.5s ease-in-out;
+    -webkit-animation: hoverCheck 0.5s ease-out;
+            animation: hoverCheck 0.5s ease-out;
   }
   .menus article:hover .hover i {
-    margin-top: 12%;
-    -webkit-animation: rotateCheck 1.5s forwards;
-            animation: rotateCheck 1.5s forwards;
+    margin-top: 25px;
+    -webkit-animation: rotateCheck 0.4s forwards;
+            animation: rotateCheck 0.4s forwards;
   }
   .menus article:hover .prix {
     text-align: end;
@@ -1188,7 +920,7 @@ body {
     padding: 2.5% 20px 0 20px;
   }
   .menus .hover {
-    display: none;
+    border-radius: 0 18px 18px 0;
   }
   .menus .btn {
     width: 30%;
@@ -1204,7 +936,7 @@ body {
   .sens-background-img {
     width: 100%;
     height: 250px;
-    background-image: url(img/restaurants/ledelicedessens.jpg);
+    background-image: url(../img/restaurants/ledelicedessens.jpg);
     background-size: cover;
   }
 }
@@ -1237,4 +969,190 @@ h1, h2, h3, h4 {
 
 body {
   margin: 0;
+}
+
+/* Première animation*/
+@-webkit-keyframes animLoading {
+  0% {
+    opacity: 1;
+    display: block;
+    z-index: 99;
+  }
+  98% {
+    opacity: 1;
+    display: block;
+    z-index: 99;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+@keyframes animLoading {
+  0% {
+    opacity: 1;
+    display: block;
+    z-index: 99;
+  }
+  98% {
+    opacity: 1;
+    display: block;
+    z-index: 99;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+.loading {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background-color: white;
+  padding: 100px 0;
+  font-size: 50px;
+  -webkit-animation: animLoading 3s forwards;
+          animation: animLoading 3s forwards;
+}
+.loading p {
+  width: 90%;
+  text-align: center;
+  font-size: medium;
+}
+
+/* Deuxième animation*/
+.restaurants .heart {
+  width: 17px;
+  height: 17px;
+  position: relative;
+  bottom: 20px;
+  left: 84%;
+}
+.restaurants .heart .fa-solid {
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  transition: all 1s;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants .heart .fa-regular {
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  transition: all 1s forwards;
+}
+.restaurants .heart .fa-regular:hover {
+  opacity: 0;
+}
+.restaurants .heart .fa-regular:hover + i {
+  opacity: 1;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Troisième animation*/
+@-webkit-keyframes rotateCheck {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotateCheck {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes endCheck {
+  0% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(5px, 0);
+    opacity: 0;
+  }
+}
+@keyframes endCheck {
+  0% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(5px, 0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes hoverCheck {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 25%;
+  }
+}
+@keyframes hoverCheck {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 25%;
+  }
+}
+/* Dernière animation*/
+@-webkit-keyframes fourthAnim {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fourthAnim {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.appetizer article:first-child, .main-course article:first-child, .desert article:first-child {
+  -webkit-animation: fourthAnim 3s both;
+          animation: fourthAnim 3s both;
+}
+
+.appetizer article:nth-child(2n), .main-course article:nth-child(2n), .desert article:nth-child(2n) {
+  -webkit-animation: fourthAnim 3s both;
+          animation: fourthAnim 3s both;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.appetizer article:nth-child(3n), .main-course article:nth-child(3n), .desert article:nth-child(3n) {
+  -webkit-animation: fourthAnim 3s both;
+          animation: fourthAnim 3s both;
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+.appetizer article:nth-child(4n), .main-course article:nth-child(4n), .desert article:nth-child(4n) {
+  -webkit-animation: fourthAnim 3s both;
+          animation: fourthAnim 3s both;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }/*# sourceMappingURL=main.css.map */
