@@ -1,9 +1,7 @@
 
-@import '_general.scss';
-@import '_footer';
-@import '_general';
-@import '_header';
-
+@import 'layout/_footer.scss';
+@import '/layout/_header.scss';
+@import 'base/_general.scss';
 
 /*RESPONSIVE*/
 @media screen and (max-width: 700px) {
