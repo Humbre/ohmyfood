@@ -1,6 +1,6 @@
 
 @import 'layout/_footer.scss';
-@import '/layout/_header.scss';
+@import 'layout/_header.scss';
 @import 'base/_general.scss';
 
 /*RESPONSIVE*/
@@ -548,7 +548,7 @@
 
 
 /*DESKTOP*/
-@media screen and (min-width: 985px) and (max-width:2000px) {
+@media screen and (min-width: 985px) {
 
 /*Accueil*/
 .subtitle{
