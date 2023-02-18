@@ -1015,8 +1015,8 @@ body {
   background-color: white;
   padding: 100px 0;
   font-size: 50px;
-  -webkit-animation: animLoading 3s forwards;
-          animation: animLoading 3s forwards;
+  -webkit-animation: animLoading 5s forwards;
+          animation: animLoading 5s forwards;
 }
 .loading p {
   width: 90%;
