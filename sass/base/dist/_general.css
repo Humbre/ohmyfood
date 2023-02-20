@@ -1,0 +1,59 @@
+/*REGLAGES GENERAUX*/
+@font-face {
+  font-family: "Shrikhand";
+  src: local("./font/Shrikhand-Regular.ttf"), url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+}
+p, span, a, h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*h2, h4{
+    @font-face {
+        font-family: 'Shrikhand';
+        src: local('./font/Shrikhand-Regular.ttf'),
+        url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+    }
+    font-family: 'Shrikhand', cursive;
+}*/
+.sous-reservation h1, .functionning h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.sous-reservation p {
+  margin: 2px;
+}
+
+.restaurant-name h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: bolder;
+}
+@font-face {
+  .restaurant-name h1 {
+    font-family: "Shrikhand";
+    src: local("./font/Shrikhand-Regular.ttf"), url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+  }
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px 0 10px 0;
+  margin: auto;
+  /* border-radius:30px;*/
+  box-shadow: 0px 0.5px 4px 1px #666666;
+}
+
+body {
+  margin: 0;
+}
