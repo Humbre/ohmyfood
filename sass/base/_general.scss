@@ -10,8 +10,7 @@
 }
 @font-face {
     font-family: 'Shrikhand';
-    src: local('./font/Shrikhand-Regular.ttf'),
-    url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+    src:url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 }
 p, span, a, h3{
     font-family: 'Roboto', sans-serif;
@@ -22,14 +21,7 @@ a{
     text-decoration: none;
     color: black;
 }
-/*h2, h4{
-    @font-face {
-        font-family: 'Shrikhand';
-        src: local('./font/Shrikhand-Regular.ttf'),
-        url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-    }
-    font-family: 'Shrikhand', cursive;
-}*/
+
 .sous-reservation h1, .functionning h2{
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
@@ -39,11 +31,6 @@ a{
     margin:2px;
 }
 .restaurant-name h1{
-    @font-face {
-        font-family: 'Shrikhand';
-        src: local('./font/Shrikhand-Regular.ttf'),
-        url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-    }
     font-family: 'Shrikhand', cursive;
     font-weight: bolder;
 }

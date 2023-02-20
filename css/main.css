@@ -38,7 +38,7 @@ header i {
 /*REGLAGES GENERAUX*/
 @font-face {
   font-family: "Shrikhand";
-  src: local("./font/Shrikhand-Regular.ttf"), url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+  src: url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 }
 p, span, a, h3 {
   font-family: "Roboto", sans-serif;
@@ -51,14 +51,6 @@ a {
   color: black;
 }
 
-/*h2, h4{
-    @font-face {
-        font-family: 'Shrikhand';
-        src: local('./font/Shrikhand-Regular.ttf'),
-        url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-    }
-    font-family: 'Shrikhand', cursive;
-}*/
 .sous-reservation h1, .functionning h2 {
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
@@ -72,12 +64,6 @@ a {
 .restaurant-name h1 {
   font-family: "Shrikhand", cursive;
   font-weight: bolder;
-}
-@font-face {
-  .restaurant-name h1 {
-    font-family: "Shrikhand";
-    src: local("./font/Shrikhand-Regular.ttf"), url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-  }
 }
 
 h3 {
@@ -134,7 +120,7 @@ header i {
 /*REGLAGES GENERAUX*/
 @font-face {
   font-family: "Shrikhand";
-  src: local("./font/Shrikhand-Regular.ttf"), url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+  src: url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 }
 p, span, a, h3 {
   font-family: "Roboto", sans-serif;
@@ -147,14 +133,6 @@ a {
   color: black;
 }
 
-/*h2, h4{
-    @font-face {
-        font-family: 'Shrikhand';
-        src: local('./font/Shrikhand-Regular.ttf'),
-        url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-    }
-    font-family: 'Shrikhand', cursive;
-}*/
 .sous-reservation h1, .functionning h2 {
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
@@ -168,12 +146,6 @@ a {
 .restaurant-name h1 {
   font-family: "Shrikhand", cursive;
   font-weight: bolder;
-}
-@font-face {
-  .restaurant-name h1 {
-    font-family: "Shrikhand";
-    src: local("./font/Shrikhand-Regular.ttf"), url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-  }
 }
 
 h3 {
@@ -209,7 +181,6 @@ body {
     color: black;
     background-color: #dededf; /*MODIF*/
     display: flex;
-    cursor: text;
     font-size: 14px;
     padding: 0 16px;
     height: 48px;
