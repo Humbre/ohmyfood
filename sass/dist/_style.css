@@ -419,7 +419,7 @@ body {
     font-size: small;
   }
   .subtitle i {
-    /*margin: 0 2px 0 auto;*/
+    margin: 18px 2px 0 35%;
     color: black;
   }
   .subtitle input {
@@ -428,18 +428,12 @@ body {
     background-color: #dededf;
     /*MODIF*/
     display: flex;
-    text-align: center;
     cursor: text;
     font-size: 14px;
-    line-height: 20px;
     padding: 0 16px;
     height: 48px;
     border: 1px solid #d6d6e7;
-    border-radius: 3px;
-    color: #23263b;
-    box-shadow: inset 0 1px 4px 0 rgba(119, 122, 175, 0.3);
     overflow: hidden;
-    transition: all 100ms ease-in-out;
   }
 
   .reservation {
@@ -540,10 +534,9 @@ body {
   }
   .restaurants .new {
     background-color: #99E2D0;
-    position: relative;
+    position: absolute;
     border-radius: 2px;
-    top: 50px;
-    left: 60%;
+    top: 710px;
     width: 90px;
     height: 30px;
     line-height: 1.7px;
@@ -552,6 +545,12 @@ body {
     color: #324c46;
     font-weight: bold;
     text-align: center;
+  }
+  .restaurants .new1 {
+    left: 34%;
+  }
+  .restaurants .new2 {
+    left: 86%;
   }
   .restaurants article {
     width: 48%;
@@ -726,7 +725,7 @@ body {
     font-size: small;
   }
   .subtitle i {
-    /*margin: 0 2px 0 auto;*/
+    margin: 18px 2px 0 45%;
     color: black;
   }
   .subtitle input {
@@ -735,18 +734,12 @@ body {
     background-color: #dededf;
     /*MODIF*/
     display: flex;
-    text-align: center;
     cursor: text;
     font-size: 14px;
-    line-height: 20px;
     padding: 0 16px;
     height: 48px;
     border: 1px solid #d6d6e7;
-    border-radius: 3px;
-    color: #23263b;
-    box-shadow: inset 0 1px 4px 0 rgba(119, 122, 175, 0.3);
     overflow: hidden;
-    transition: all 100ms ease-in-out;
   }
 
   .reservation {
@@ -845,10 +838,9 @@ body {
   }
   .restaurants .new {
     background-color: #99E2D0;
-    position: relative;
+    position: absolute;
     border-radius: 2px;
-    top: 50px;
-    left: 60%;
+    top: 730px;
     width: 90px;
     height: 30px;
     line-height: 1.7px;
@@ -857,6 +849,12 @@ body {
     color: #324c46;
     font-weight: bold;
     text-align: center;
+  }
+  .restaurants .new1 {
+    left: 36%;
+  }
+  .restaurants .new2 {
+    left: 88%;
   }
   .restaurants article {
     width: 48%;

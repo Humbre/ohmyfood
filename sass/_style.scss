@@ -330,7 +330,7 @@
     opacity: 0.8;
     font-size: small;
     i{
-        /*margin: 0 2px 0 auto;*/
+        margin: 18px 2px 0 35%;
         color:black;
     }
     input{
@@ -338,18 +338,12 @@
         color:black;
         background-color:#dededf ; /*MODIF*/
         display: flex;
-        text-align: center;
         cursor: text;
         font-size: 14px;
-        line-height: 20px;
         padding: 0 16px;
         height: 48px;
         border: 1px solid #d6d6e7;
-        border-radius: 3px;
-        color: rgb(35, 38, 59);
-        box-shadow: inset 0 1px 4px 0 rgb(119 122 175 / 30%);
         overflow: hidden;
-        transition: all 100ms ease-in-out;
     
     }
 }
@@ -450,10 +444,9 @@
     }
     .new{
         background-color: #99E2D0;
-        position:relative;
+        position:absolute;
         border-radius: 2px;
-        top:50px;
-        left:60%;
+        top:710px;
         width: 90px;
         height: 30px;
         line-height: 1.7px;
@@ -462,7 +455,13 @@
             font-weight: bold;
             text-align: center;
         }
-    } 
+    }
+    .new1{
+        left:34%;
+    }
+    .new2{
+        left:86%;
+    }    
     article{
         width: 48%;
         height: 250px;
@@ -640,7 +639,7 @@
     opacity: 0.8;
     font-size: small;
     i{
-        /*margin: 0 2px 0 auto;*/
+        margin: 18px 2px 0 45%;
         color:black;
     }
     input{
@@ -648,18 +647,12 @@
         color:black;
         background-color:#dededf ; /*MODIF*/
         display: flex;
-        text-align: center;
         cursor: text;
         font-size: 14px;
-        line-height: 20px;
         padding: 0 16px;
         height: 48px;
         border: 1px solid #d6d6e7;
-        border-radius: 3px;
-        color: rgb(35, 38, 59);
-        box-shadow: inset 0 1px 4px 0 rgb(119 122 175 / 30%);
         overflow: hidden;
-        transition: all 100ms ease-in-out;
     
     }
 }
@@ -758,10 +751,9 @@
     }
     .new{
         background-color: #99E2D0;
-        position:relative;
+        position:absolute;
         border-radius: 2px;
-        top:50px;
-        left:60%;
+        top:730px;
         width: 90px;
         height: 30px;
         line-height: 1.7px;
@@ -770,7 +762,13 @@
             font-weight: bold;
             text-align: center;
         }
-    } 
+    }
+    .new1{
+        left:36%;
+    }
+    .new2{
+        left:88%;
+    }    
     article{
         width: 48%;
         height: 250px;
